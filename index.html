@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" rel="stylesheet" />
+
+    <title>Colt Steele Practice Projects</title>
+  </head>
+  <body>
+    <div class="eventsSection">
+      <h1>Events</h1>
+      <div class="intro">
+        <p>How do we respond to actions that the user does?</p>
+        <p>Events Listeners.</h2>
+        <p>There are tons of these on the mdn docs!</p>
+
+        <p>Common Events:</p>
+        <ul>
+        <li>onchange</li>
+        <li>onclick</li>
+        <li>onmouseover</li>
+        <li>onmouseout</li>
+        <li>onkeydown</li>
+        <li>onload</li>
+      </ul>
+      <p>Most Important Parts of This Section</p>
+      <ul>
+      <li>addEventListener</li>
+      <li>Form Events</li>
+      </ul>
+      <p> Important But Not crucial</p>
+      <ul>
+        <li>keyboardEvents</li>
+        <li>input and Change events</li>
+        <li>event bubbling</li>
+        <li>event delegation</li>
+      </ul>
+      </div>
+      <h2>There are 3 ways to react to a user's action</h2>
+      <h3>1. In-Line JS</h3>
+      <div class="notes">
+        <h4>
+          Here Javascript is written in-line with the button element.Don't do
+          this
+        </h4>
+      </div>
+      <div class="codeSample">
+        <code>
+          &lt button &gt onclick="alert('I am connected to the html using
+          onclick built-in function')" > Click Me! &lt/ button &gt
+        </code>
+      </div>
+      <button
+        onclick="alert('I am connected to the html using onclick built-in function')"
+      >
+        Click Me!
+      </button>
+      <h3>
+        2. Attaching built-in function such as Onlick through the Javascript
+      </h3>
+
+      <h4>For example</h4>
+      <div class="codeSample">
+        <code>const btn = document.querySelector("#v2");</code> <br />
+        <code
+          >btn.onclick = function () <br />{ alert("hola bonita");
+          <br />};</code
+        >
+      </div>
+      <button id="v2">Click Me Second Version</button>
+      <div class="notes">
+        <h4>
+          you could attach many different event listeners to the same button.
+          Event Listener types are on the MDN docs.
+        </h4>
+        <h4>Another exaple: onmouseenter</h4>
+        <div id="screamBox">
+          <p>Scream Box - Hover Over Me to Alert a Scream</p>
+        </div>
+      </div>
+      <div class="codeSample">
+        <code>
+          function scream(){ <code> console.log("AHHHHHH!!!!!")</code>
+          <code> alert('SCREAMMMING ON MOUSE ENTER')</code>
+          }
+        </code>
+        <code
+          >const screamBox = document.getElementById("screamBox");<br
+        /></code>
+        <code>screamBox.onmouseenter = scream;</code>
+      </div>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>
