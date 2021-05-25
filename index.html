@@ -5,91 +5,122 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="styles.css" rel="stylesheet" />
-
+    <link href="eventsStyles.css" rel="stylesheet" />
     <title>Colt Steele Practice Projects</title>
   </head>
   <body>
     <div class="eventsSection">
-      <h1>Events</h1>
-      <div class="intro">
-        <p>How do we respond to actions that the user does?</p>
-        <p>Events Listeners.</h2>
-        <p>There are tons of these on the mdn docs!</p>
+      <div class="title">
+        <h1>Events</h1>
+        <div class="long-copy">
+          <p>How to Interact With The User</p>
+          <p>Color Theme: https://colorhunt.co/palette/281817</p>
+          <p>Font Theme: Lato - google fonts</p>
+        </div>
+      </div>
 
+      <div class="long-copy">
+        <p>How do we respond to actions that the user does?</p>
+        <p>Such as when the user:</p>
+        <li>Scrolls</li>
+        <li>Clicks on something</li>
+        <li>Changes an input</li>
+        <li>Hovers over something</li>
+        <p>We Use Event Listeners.</p>
+        <p>Event Listeners are: PUT IN SHORT DESC HERE!</p>
         <p>Common Events:</p>
         <ul>
-        <li>onchange</li>
-        <li>onclick</li>
-        <li>onmouseover</li>
-        <li>onmouseout</li>
-        <li>onkeydown</li>
-        <li>onload</li>
-      </ul>
-      <p>Most Important Parts of This Section</p>
-      <ul>
-      <li>addEventListener</li>
-      <li>Form Events</li>
-      </ul>
-      <p> Important But Not crucial</p>
-      <ul>
-        <li>keyboardEvents</li>
-        <li>input and Change events</li>
-        <li>event bubbling</li>
-        <li>event delegation</li>
-      </ul>
+          <li>onchange</li>
+          <li>onclick</li>
+          <li>onmouseover</li>
+          <li>onmouseout</li>
+          <li>onkeydown</li>
+          <li>onload</li>
+        </ul>
+
+        <div>
+          <p>Most Important Parts of This Section</p>
+          <ol>
+            <li>addEventListener</li>
+            <li>Form Events</li>
+          </ol>
+        </div>
+
+        <div>
+          <p>Important But Not crucial</p>
+          <ol>
+            <li>keyboardEvents</li>
+            <li>input and Change events</li>
+            <li>event bubbling</li>
+            <li>event delegation</li>
+          </ol>
+        </div>
       </div>
-      <h2>There are 3 ways to react to a user's action</h2>
+
+      <h2 class="center">There are 3 ways to react to a user's action</h2>
       <h3>1. In-Line JS</h3>
-      <div class="notes">
-        <h4>
-          Here Javascript is written in-line with the button element.Don't do
-          this
-        </h4>
+      <div class="notesAndCode">
+        <div class="notes">
+          <h4>
+            Here Javascript is written in-line with the button element. Don't do
+            this
+          </h4>
+          <button
+            onclick="alert('this user event is an onclick event because you clicked on the button')"
+          >
+            Click Me!
+          </button>
+        </div>
+        <div class="codeSample">
+          <code>
+            &ltbutton onclick="alert('user event = onclick')"> Click Me!
+            &lt/button&gt
+          </code>
+        </div>
       </div>
-      <div class="codeSample">
-        <code>
-          &lt button &gt onclick="alert('I am connected to the html using
-          onclick built-in function')" > Click Me! &lt/ button &gt
-        </code>
-      </div>
-      <button
-        onclick="alert('I am connected to the html using onclick built-in function')"
-      >
-        Click Me!
-      </button>
+
       <h3>
         2. Attaching built-in function such as Onlick through the Javascript
       </h3>
+      <div class="notesAndCode">
+        <div class="notes">
+          <h4>
+            you could attach many different event listeners to the same button.
+            Event Listener types are on the MDN docs.
+          </h4>
+          <h4>For example</h4>
+          <button id="v2">Click Me Second Version</button>
+        </div>
 
-      <h4>For example</h4>
-      <div class="codeSample">
-        <code>const btn = document.querySelector("#v2");</code> <br />
-        <code
-          >btn.onclick = function () <br />{ alert("hola bonita");
-          <br />};</code
-        >
-      </div>
-      <button id="v2">Click Me Second Version</button>
-      <div class="notes">
-        <h4>
-          you could attach many different event listeners to the same button.
-          Event Listener types are on the MDN docs.
-        </h4>
-        <h4>Another exaple: onmouseenter</h4>
-        <div id="screamBox">
-          <p>Scream Box - Hover Over Me to Alert a Scream</p>
+        <div class="codeSample">
+          <p>index.html file</p>
+          <code>&ltbutton id="v2"lt&</code>
+          <p>scripts.js file</p>
+          <code>const btn = document.querySelector("#v2");</code> <br />
+          <code
+            >btn.onclick = function () <br />{ alert("hola bonita");
+            <br />};</code
+          >
         </div>
       </div>
-      <div class="codeSample">
-        <code>
-          function scream(){ <code> console.log("AHHHHHH!!!!!")</code>
-          <code> alert('SCREAMMMING ON MOUSE ENTER')</code>
-          }
-        </code>
-        <code
-          >const screamBox = document.getElementById("screamBox");<br
-        /></code>
-        <code>screamBox.onmouseenter = scream;</code>
+      <div class="notesAndCode">
+        <div class="notes">
+          <h4>Another exaple: onmouseenter</h4>
+          <div id="screamBox">
+            <p>Scream Box - Hover Over Me to Alert a Scream</p>
+          </div>
+        </div>
+        <div class="codeSample">
+          <code>
+            function scream(){ <code> console.log("AHHHHHH!!!!!")</code>
+            <code> alert('SCREAMMMING ON MOUSE ENTER')</code>
+            }
+          </code>
+          <code
+            >const screamBox = document.getElementById("screamBox");<br
+          /></code>
+          <code>screamBox.onmouseenter = scream;</code>
+        </div>
       </div>
     </div>
     <script src="scripts.js"></script>
