@@ -79,14 +79,13 @@
         </div>
       </div>
 
-      <h3>
-        2. Attaching built-in function such as Onlick through the Javascript
-      </h3>
+      <h3>2. Attaching built-in function such as Onlick with Javascript</h3>
       <div class="notesAndCode">
         <div class="notes">
           <h4>
-            you could attach many different event listeners to the same button.
-            Event Listener types are on the MDN docs.
+            -you could attach many different event listeners to the same
+            button.<br />
+            -Event Listener types are on the MDN docs.
           </h4>
           <h4>For example</h4>
           <button id="v2">Click Me Second Version</button>
@@ -94,7 +93,10 @@
 
         <div class="codeSample">
           <p>index.html file</p>
-          <code>&ltbutton id="v2"lt&</code>
+          <code
+            >&ltbutton id="v2"&gt Click Me Second Version &lt/button&gt</code
+          >
+          <br />
           <p>scripts.js file</p>
           <code>const btn = document.querySelector("#v2");</code> <br />
           <code
@@ -111,17 +113,99 @@
           </div>
         </div>
         <div class="codeSample">
+          <p>html file</p>
+          <br />
+          <code
+            >&ltdiv id="screamBox"&gt
+            <code
+              >&ltp&gtScream Box - Hover Over Me to Alert a Scream&lt/p&gt</code
+            >
+          </code>
+          <code>&lt/div&gt</code><br />
+          <p>Scripts.js file</p>
+          <br />
           <code>
             function scream(){ <code> console.log("AHHHHHH!!!!!")</code>
             <code> alert('SCREAMMMING ON MOUSE ENTER')</code>
             }
           </code>
+
           <code
             >const screamBox = document.getElementById("screamBox");<br
           /></code>
           <code>screamBox.onmouseenter = scream;</code>
         </div>
       </div>
+      <h3>addEventListener</h3>
+      <div class="notesAndCode">
+        <div class="notes">
+          <p>What:</p>
+          <ul>
+            <li>method.</li>
+            <li>generic event listener.</li>
+            <li>
+              function that takes both an event to listen for AND a callback
+              function.
+            </li>
+            <li>
+              Callback function: code we want to run when the event occurs.
+            </li>
+          </ul>
+          <p>How: </p>
+          <ol>
+            <li>Select an element through javascript using something like querySelector.</li>
+            <li>add the addEventListener to the element with an event type(such as click) and a callback function(such as an alert)</li>
+            <li>You can define the callback function within the event listener or independently</li>
+          </ol>
+          <p>Why:
+            <ul>
+              <li>onclick is simply a property. It can have one reference using onlick method. However, with addEventListener you can have as many call back functions as you want.</li>
+            </ul>
+          </p>
+          <p>When: whenever you want to respond to a users action</p>
+          <p>Where: both html and JS file</p>
+          <button id="v3">Third Version Using addEventListener</button>
+        </div>
+        <div class="codeSample">
+         
+            <p>html file</p><br>
+           <code>&ltbutton id="v3"&gtThird Version Using addEventListener&lt/button&gt</code> <br>
+            <p>scripts file</p><br>
+            <code>
+              const btn=document.querySelecto('#v3');
+            </code>
+            <code>btn.addEventListener("click", 
+              <code>function(){<code>
+                alert("clicked");
+              );</code></code></code>}
+
+        </div>
+      </div>
+      <h3>Practice Project: Background Color Changer</h3>
+      <div class="divider">
+      <div id="colorBoxLarge">
+        <p id="wordsBox">
+          These are words that will change to the value of the randomly generized color
+        </p>
+      </div>
+      <div class="multipleBoxes">
+        <div class="colorBoxSmall">
+          <p id="wordsBox">
+            These are words that will change to the value of the randomly generized color
+          </p>
+        </div>
+        <div class="colorBoxSmall">
+          <p id="wordsBox">
+            These are words that will change to the value of the randomly generized color
+          </p>
+        </div>
+        <div class="colorBoxSmall">
+          <p id="wordsBox">
+            These are words that will change to the value of the randomly generized color
+          </p>
+        </div>
+      </div>
+    </div>
     </div>
     <script src="scripts.js"></script>
   </body>

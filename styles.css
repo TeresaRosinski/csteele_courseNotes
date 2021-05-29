@@ -96,18 +96,21 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: left;
   width: 33%;
   height:100%;
+  margin-left: 2%;
 }
 
-.divider50 {
+.divider {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  height: 100%;
   padding: 1%;
 }
+
 .first50Divider {
   width: 50%;
   padding: 1%;
@@ -116,6 +119,13 @@ p {
   width: 50%;
   padding: 1%;
 }
+.multipleBoxes{
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ width: 69%;
+ height: 100%;
+}
 .titleAndList {
   display: flex;
   flex-direction: column;
@@ -123,11 +133,8 @@ p {
   justify-content: flex-start;
 }
 button {
-  margin-top: 4%;
-  margin-left: 8%;
   padding: 4%;
-width:92%;
-height:13vh;
+  width:100%;
   background-color: var(--eventsMint_3);
   color: var(--eventsDarkGreen_4);
   border: none;

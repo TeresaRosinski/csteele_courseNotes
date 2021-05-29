@@ -34,17 +34,50 @@
   width: 60%;
 }
 
-
 #screamBox {
   height: 15%;
-  background-color: purple;
-  width: 15%;
+  background-color: var(--eventsMint_3);
+  width: 96%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: peachpuff;
+  color: var(--eventsDarkGreen_4);
   padding: 4%;
-  margin-left: 12%;
+  margin-left: 2%;
   margin-top: 3%;
   margin-bottom: 3%;
+  text-align: center;
+}
+.notes p {
+  text-align: left;
+}
+.notes li {
+  list-style-type: none;
+  margin-left: 8%;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+}
+#colorBoxLarge {
+  height: 40vh;
+  width: 40vh;
+  background-color: var(--eventsLightBeige_1);
+  border: 1px var(--eventsDarkGreen_4) solid;
+  margin-left: 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1%;
+}
+.colorBoxSmall {
+  height: 33vh;
+  width: 33vh;
+  background-color: var(--eventsLightBeige_1);
+  border: 1px var(--eventsDarkGreen_4) solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1%;
+  padding: 1%;
 }
