@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles2.css" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="gameCard">
+        <div class="imageContainer">
+          <img src="./images/pingPong.jpg" class="image" />
+        </div>
+        <div class="title">
+          <p>Ping Pong</p>
+        </div>
+        <div class="score">
+          <div class="points"><p id="playerOneScore">0</p></div>
+          <p>TO</p>
+          <div class="points"><p id="playerTwoScore">0</p></div>
+        </div>
+        <div class="number">
+          <p>Playing to</p>
+          <select name="playingTo" id="playingTo">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <div class="controller">
+          <p class="playerOne" id="playerOne">Player 1+</p>
+          <p class="playerTwo" id="playerTwo">Player 2+</p>
+          <p class="reset" id="reset">Reset</p>
+        </div>
+      </div>
+    </div>
+    <script src="scripts2.js"></script>
+  </body>
+</html>

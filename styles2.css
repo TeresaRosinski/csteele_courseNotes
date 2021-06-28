@@ -1,0 +1,79 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.gameCard {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 50vh;
+  border: 1px lightgreen solid;
+}
+.imgageContainer {
+  height: 33%;
+  width: 100%;
+}
+.image {
+  height: 100%;
+  width: 100%;
+}
+.title p {
+  width: 100%;
+  text-align: center;
+  font-size: 140%;
+}
+.score {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.points {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5vh;
+  height: 5vh;
+  border: 1px black solid;
+  margin: 3%;
+  border-radius: 3px;
+}
+.number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.number select {
+  width: 5vh;
+  height: 5vh;
+  margin: 2%;
+}
+.controller {
+  display: flex;
+  flex-direction: row;
+
+  align-items: flex-end;
+
+  width: 100%;
+}
+.controller p {
+  width: 33%;
+  padding: 4%;
+  text-align: center;
+}
+.playerOne {
+  background-color: yellow;
+  color: white;
+}
+.playerTwo {
+  background-color: blue;
+  color: white;
+}
+.reset {
+  background-color: red;
+  color: white;
+}
