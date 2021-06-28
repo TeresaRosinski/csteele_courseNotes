@@ -27,7 +27,7 @@ const makeRandColor = () => {
 function colorize() {
   this.style.backgroundColor = makeRandColor();
   this.style.color = makeRandColor();
-  this.style.innerText = makeRandColor();
+  this.innerText = this.style.color;
   console.log(this);
 }
 //adds event listener to the colorBoxLarge Variable
@@ -37,3 +37,9 @@ const colorBoxSmalls = document.getElementsByClassName("colorBoxSmall");
 for (let smallBox of colorBoxSmalls) {
   smallBox.addEventListener("click", colorize);
 }
+const tweetForm = document.querySelector('#tweetForm')
+tweetForm.addEventListener('submit', function(e){
+  console.log("SUBMIT!!")
+  console.log(e)
+  e.preventDefault();
+})

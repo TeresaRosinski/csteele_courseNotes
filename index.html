@@ -206,6 +206,34 @@
         </div>
       </div>
     </div>
+    <h3>Keyboard Events and Event Objects</h3>
+    <ul>
+      <li>The Event Object: Automatically passed into the callback function from the .addEventListener method</li>
+      <li>Mouse Event Object is different event from a Keyboard Event Object</li>
+      <li>We can listen for keyboard events such as keyup and keydown - which corresponds to whether a key is being pushed down or on the way up </li>
+      <ul
+      ><li>
+        On the object are LOTS of properties. Some to look out for are: "code" and "key"
+      </li>
+    <li>code: KeyA key: a</li>
+  <li>key: "end result"</li>
+<li>code: Location of key that was pressed, on the keyboard</li></ul>
+<li> You can add an eventListener to the window to track any keys being pressed regardless of inputs etc.</li>
+    </ul>
+<h3>Forms</h3>
+<p>Without JS: add and action to the form tag - data will be sent to the location of the action
+  <li>To keep data that is added to the inputs - you must grab te data before the form is sent</li>
+  <li>To prevent the form submitting previous to grabbing data - use e.preventDefault </li>
+</p>
+<h3>Form Events</h3>
+<form action="/dogs" id="tweetForm">
+<input type="text" name="username" placeholder="username">
+<input type="text" name="tweet" placeholder="tweet">
+<button>Post tweet</button></form>
+<h4>Tweets</h4>
+<ul id="tweets">
+  
+</ul>
     </div>
     <script src="scripts.js"></script>
   </body>
